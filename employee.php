@@ -108,4 +108,3 @@ include('./includes/header.php');
   });
   </script>
 </body>
-</html>

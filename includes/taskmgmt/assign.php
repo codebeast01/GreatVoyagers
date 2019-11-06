@@ -15,7 +15,7 @@
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">Assigned Task</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Enter Task assigned"  required/>
+            <input type="text" class="form-control" placeholder="Enter Task assigned"  readonly="" />
           </div>
         </div>
       </div>
@@ -23,9 +23,9 @@
   <div class="row">
     <div class="col-md-6">
         <div class="form-group row">
-          <label class="col-sm-3 col-form-label">Customer Id</label>
+          <label class="col-sm-3 col-form-label">Customer ID</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Customer Id" required/>
+            <input type="text" class="form-control" placeholder="Enter Customer Id" required/>
           </div>
         </div>
       </div>

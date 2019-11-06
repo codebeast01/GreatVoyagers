@@ -4,7 +4,7 @@
 <form class="form-sample">
     <p style="color:red;" > * Every Field is Mandatory. Kindly fill in all the details.</p>
     <center>
-      <img src="includes/blank1.png" alt="blank profile image" style="height: 35vh;width: 17vw;">
+      <img src="includes/blank1.png" alt="blank profile image" style="height: 35vh;width: 17vw;" required/>
     </center>
     <br>
      <div class="row">
@@ -58,17 +58,17 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group row">
-          <label class="col-sm-3 col-form-label">Phone No.</label>
+          <label class="col-sm-3 col-form-label">Mobile No.</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Enter Phone No."  required/>
+            <input type="text" class="form-control" placeholder="Enter Mobile No."  required/>
           </div>
         </div>
       </div>
-  <div class="col-md-6">
+      <div class="col-md-6">
         <div class="form-group row">
-          <label class="col-sm-3 col-form-label"> Telephone No.</label>
+          <label class="col-sm-3 col-form-label">Date of Birth</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Enter Telephone No."  required/>
+            <input  type="date" class="form-control" required/>
           </div>
         </div>
       </div>
@@ -82,18 +82,38 @@
           </div>
         </div>
       </div>
-
       <div class="col-md-6">
         <div class="form-group row">
-          <label class="col-sm-3 col-form-label">Date of Birth</label>
+          <label class="col-sm-3 col-form-label">Aadhar No.</label>
           <div class="col-sm-9">
-            <input  type="date" class="form-control" required/>
+            <input type="text" class="form-control" placeholder="Enter Aadhar Card No."/>
           </div>
         </div>
       </div>
     </div>
+    
     <div class="row">
-    <div class="col-md-6">
+      <div class="col-md-6">
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">PanCard No.</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control"  placeholder="Enter PanCard No." required/>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">Upload Pan</label>
+          <div class="col-sm-9">
+          <input type="file" class="custom-file-input form-control" id="customFile" name="filename" required/>
+          <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">Gender</label>
           <div class="col-sm-3">
@@ -116,38 +136,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">Category</label>
-          <div class="col-sm-9">
-            <select class="form-control" required>
-              <option>General</option>
-              <option>OBC</option>
-              <option>SC/ST</option>
-            </select>
-          </div>
-        </div>
-      </div>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">PanCard No.</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control"  placeholder="Enter PanCard No." required/>
-            </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">Aadhar No.</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Enter Aadhar Card No." required/>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <p class="card-description" align="center"> Address </p>
     
     <div class="row">
@@ -155,13 +144,7 @@
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">Country</label>
           <div class="col-sm-9">
-            <select class="form-control" required>
-            <option>India</option>
-              <option>America</option>
-              <option>Italy</option>
-              <option>Russia</option>
-              <option>Britain</option>
-            </select>
+           <input type="text" class="form-control" placeholder="Enter Country"  required/> 
           </div>
         </div>
       </div>
@@ -197,7 +180,7 @@
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">Address 1</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Enter permanent Address" required/>
+            <input type="text" class="form-control" placeholder="Enter Address" required/>
           </div>
         </div>
       </div>
@@ -214,30 +197,11 @@
   <div class="row">
     <div class="col-md-6">
         <div class="form-group row">
-          <label class="col-sm-3 col-form-label">Job Status</label>
-          <div class="col-sm-9">
-            <select class="form-control" required>
-            <option>operation Head</option>
-              <option>Association Head</option>
-              <option>Normal Employee</option>
-              
-            </select>
-          </div>
+          <label class="col-sm-3 col-form-label">Designation</label>
+          <input type="text" class="form-control" placeholder="Enter Designation" required/>
         </div>
       </div>
-    <div class="col-md-6">
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">Task Assigned</label>
-          <div class="col-sm-9">
-            <select class="form-control" required>
-            <option>Ticket Booking</option>
-              <option>Customer Management</option>
-              <option>Travel Management</option>
-              </select>
-            </div>
-        </div>
-      </div>
-</div>
+  </div>
     <center>
       <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Submit</button>
       <button type="reset" class="btn btn-gradient-dark btn-lg mr-2" >Reset</button>

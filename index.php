@@ -4,88 +4,40 @@ include('./includes/header.php');
 
 ?>
 <body>
-<div class="container-scroller">
-  <!-- partial top nav-bar -->
-  <?php
-
-    include('./includes/nav.php');
-
-  ?>
-  <!-- partial -->
-
-  <div class="container-fluid page-body-wrapper">
-    <!-- partial:partials/_sidebar.html -->
-    <?php
-
-      include('./includes/sidebar.php');
-
-    ?>    
-    <!-- partial -->
-
-    <div class="main-panel">
-      <div class="content-wrapper">
-        <div class="page-header">
-          <h3 class="page-title">
-            <span class="page-title-icon bg-gradient-primary text-white mr-2">
-              <i class="mdi mdi-home"></i>
-            </span> Dashboard </h3>
-          <nav aria-label="breadcrumb">
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">
-                <span></span>Overview<i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
-              </li>
-            </ul>
-          </nav>
-        </div> <!--
-        <div class="row">
-          <div class="col-md-6 stretch-card grid-margin">
-            <div class="card bg-gradient-info card-img-holder text-white">
-              <div class="card-body">
-                <a href="#">
-                  <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                </a>
-                <h4 class="font-weight-normal mb-3">Weekly Sales<i class="mdi mdi-chart-line mdi-24px float-right"></i>
-                </h4>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+          <div class="row flex-grow">
+            <div class="col-lg-4 mx-auto">
+              <div class="auth-form-light text-left p-5">
+                <div class="brand-logo" align="center">
+                  <img src="includes/logo.jpeg">
+                </div>
+                <h4>Hello! let's get started</h4>
+                <h6 class="font-weight-light">Sign in to continue.</h6>
+                <form class="pt-3">
+                  <div class="form-group">
+                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="mt-3">
+                    <a class="btn btn-block btn-gradient-info btn-lg font-weight-medium auth-form-btn" href="home.php">SIGN IN</a>
+                  </div>
+                  <div class="my-2 d-flex justify-content-between align-items-center">
+                    <br>
+                    <a href="#" class="auth-link text-black mx-auto">Forgot password?</a>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="col-md-6 stretch-card grid-margin">
-            <div class="card bg-gradient-dark card-img-holder text-white">
-              <div class="card-body">
-                  <a href="#">
-                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                  </a>
-                  <h4 class="font-weight-normal mb-3">
-                    Visitors Online<i class="mdi mdi-diamond mdi-24px float-right"></i>
-                  </h4>
-              </div>
-            </div>
-          </div>
-        </div>  -->
-        <?php
-
-          include('./includes/dashboard-body/recents-task.php');
-          include('./includes/dashboard-body/project-status.php');
-
-        ?>
+        </div>
+        <!-- content-wrapper ends -->
       </div>
-      <!-- content-wrapper ends -->
-
-      <!-- partial:partials/_footer.html -->
-      <?php
-
-        include('./includes/footer.php');
-
-      ?>
-      <!-- partial -->
-      
+      <!-- page-body-wrapper ends -->
     </div>
-    <!-- main-panel ends -->
-  </div>
-  <!-- page-body-wrapper ends -->
-</div>
-  <?php
-    include('./includes/script.php');
-  ?>
-</body>
+    <!-- container-scroller -->
+  </body>
 </html>

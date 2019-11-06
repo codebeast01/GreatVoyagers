@@ -44,11 +44,17 @@ include('./includes/header.php');
               include('./includes/taskmgmt/assign_task.php');
           ?>
         </div>
-          <center>
-          <button type="submit" class="btn btn-gradient-success btn-lg mr-2" name="assignment">View All Assignments</button>
-       </center>    
-        
-    
+        <div class="row assign-form">
+          
+        </div>
+        <br>
+        <center>
+          <button type="submit" class="btn btn-gradient-success btn-lg mr-2 assigned" name="assignment">View All Assignments</button>
+        </center>    
+        <br>
+        <div class="row assigned">
+          
+        </div>
         </div>
       <!-- content-wrapper ends -->
 
@@ -68,7 +74,19 @@ include('./includes/header.php');
   <?php
     include('./includes/script.php');
   ?>
- 
-
+ <script type="text/javascript">
+    $(document).ready(function(){
+        $(".assigned").click(function(){
+            $("div.assigned").load("includes/taskmgmt/table.php");
+        });
+    });
+  </script>  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $(".assign-form").click(function(){
+            $("div.assign-form").load("includes/taskmgmt/assign.php");
+        });
+    });
+  </script> 
 </body>
 </html>

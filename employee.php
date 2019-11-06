@@ -53,7 +53,7 @@ include('./includes/header.php');
           <div class="col-md-6 stretch-card grid-margin">
             <div class="card bg-gradient-dark card-img-holder text-white">
               <div class="card-body">
-                <a href="#" class="new-link">
+                <a href="new-employee.php" class="new-link">
                     <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                   </a>
                 <h4 class="font-weight-normal mb-3">New Employee<i class="mdi mdi-diamond mdi-24px float-right"></i>
@@ -84,14 +84,7 @@ include('./includes/header.php');
   <?php
     include('./includes/script.php');
   ?>
-  <!-- Script for employee forms -->
-  <script type="text/javascript">
-    $(document).ready(function(){
-        $(".new-link").click(function(){
-            $("div.form").load("includes/employee/new.php");
-        });
-    });
-  </script>  
+  <!-- Script for employee forms -->  
   <script type="text/javascript">
     $(document).ready(function(){
         $(".existing-link").click(function(){

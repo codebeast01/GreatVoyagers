@@ -13,29 +13,44 @@
           <tr>
             <td> 1 </td>
             <td>Visa Only</td>
-            <td> <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Assign</button> </td>
+            <td align="center">
+              <button type="submit" class="btn btn-gradient-success btn-lg mr-2 assign-form">Assign</button>
+            </td>
           </tr>
            <tr>
             <td> 2 </td>
             <td>Hotel Only</td>
-            <td> <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Assign</button> </td>
-          </tr> <tr>
+            <td align="center">
+              <button type="submit" class="btn btn-gradient-success btn-lg mr-2 assign-form">Assign</button>
+            </td>
+          </tr> 
+          <tr>
             <td> 3 </td>
             <td>Cab Only</td>
-            <td> <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Assign</button> </td>
-          </tr> <tr>
+            <td align="center">
+              <button type="submit" class="btn btn-gradient-success btn-lg mr-2 assign-form">Assign</button>
+            </td>
+          </tr>
+          <tr>
             <td> 4 </td>
             <td>Domestic</td>
-            <td> <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Assign</button> </td>
-          </tr> <tr>
+            <td align="center">
+              <button type="submit" class="btn btn-gradient-success btn-lg mr-2 assign-form">Assign</button>
+            </td>
+          </tr>
+          <tr>
             <td> 5 </td>
             <td>Flight Only</td>
-            <td> <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Assign</button> </td>
+            <td align="center">
+              <button type="submit" class="btn btn-gradient-success btn-lg mr-2 assign-form">Assign</button>
+            </td>
           </tr>
            <tr>
             <td> 6 </td>
             <td>International</td>
-            <td> <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Assign</button> </td>
+            <td align="center">
+              <button type="submit" class="btn btn-gradient-success btn-lg mr-2 assign-form">Assign</button>
+            </td>
           </tr>
         </tbody>
       </table>

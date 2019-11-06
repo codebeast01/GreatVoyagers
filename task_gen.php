@@ -44,14 +44,14 @@ include('./includes/header.php');
                 <button class="btn btn-block btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Customer Request Generator
                 </button>
-                <div class="dropdown-menu btn-block color" aria-labelledby="dropdownMenu2">
+                <div class="dropdown-menu btn-block" aria-labelledby="dropdownMenu2">
                   <!-- Package Links  -->
-                  <a href="#" class="dropdown-item package1">Visa Only</a>
-                  <a href="#" class="dropdown-item package2">Hotel Only</a>
-                  <a href="#" class="dropdown-item package3">Cab only</a>
-                  <a href="#" class="dropdown-item package4">Flight Only</a>
-                  <a href="#" class="dropdown-item package5">International</a>
-                  <a href="#" class="dropdown-item package6">Domestic</a>
+                  <button class="dropdown-item package1">Visa Only</button>
+                  <button class="dropdown-item package2">Hotel Only</button>
+                  <button class="dropdown-item package3">Cab Only</button>
+                  <button class="dropdown-item package4">Flight Only</button>
+                  <button class="dropdown-item package5">International Tour Package</button>
+                  <button class="dropdown-item package6">Domestic Tour Package</button>
                 </div>
               </div>
             </div>
@@ -82,34 +82,41 @@ include('./includes/header.php');
   <script type="text/javascript">
     $(document).ready(function(){
         $(".package1").click(function(){
-            $("div.form").load("includes/taskgeneration/package-1.php");
+            $("div.form").load("includes/taskgeneration/visa.php");
         });
     });
   </script>
   <script type="text/javascript">
     $(document).ready(function(){
         $(".package2").click(function(){
-            $("div.form").load("includes/taskgeneration/package-2.php");
+            $("div.form").load("includes/taskgeneration/hotel.php");
         });
     });
   </script>
   <script type="text/javascript">
     $(document).ready(function(){
         $(".package3").click(function(){
-            $("div.form").load("includes/taskgeneration/package-3.php");
+            $("div.form").load("includes/taskgeneration/cab.php");
         });
     });
   </script>
   <script type="text/javascript">
     $(document).ready(function(){
         $(".package4").click(function(){
-            $("div.form").load("includes/taskgeneration/package-4.php");
+            $("div.form").load("includes/taskgeneration/flight.php");
         });
     });
   </script>
   <script type="text/javascript">
     $(document).ready(function(){
         $(".package5").click(function(){
+            $("div.form").load("includes/taskgeneration/package-5.php");
+        });
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $(".package6").click(function(){
             $("div.form").load("includes/taskgeneration/package-5.php");
         });
     });

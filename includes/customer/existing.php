@@ -7,23 +7,20 @@
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">Customer ID</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control"  placeholder="Enter First Name" required/>
+            <input type="text" class="form-control"  placeholder="Enter your ID" required/>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label"> Aadhar No.</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control"  placeholder="Enter twelve Digit Aadhar No." required/>
-          </div>
-        </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Submit</button>
+      </div>
+      <div class="col-md-2">
+        <button type="reset" class="btn btn-gradient-dark btn-lg mr-2" >Reset</button>
+      </div>
+      <div class="col-md-2">
+        <button type="delete" class="btn btn-gradient-success btn-lg mr-2" >Delete</button>
       </div>
     </div>
-    <center>
-      <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Submit</button>
-      <button type="reset" class="btn btn-gradient-dark btn-lg mr-2" >Reset</button>
-    </center>
   </form>
 </div>
 </div>

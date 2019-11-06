@@ -23,6 +23,7 @@
     <center>
       <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Submit</button>
       <button type="reset" class="btn btn-gradient-dark btn-lg mr-2" >Reset</button>
+      <button type="reset" class="btn btn-gradient-success btn-lg mr-2" >Delete</button>
     </center>
   </form>
 </div>

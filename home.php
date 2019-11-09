@@ -1,5 +1,24 @@
 <?php
 
+include('login.php');
+$con = mysqli_connect("localhost","root","","GreatVoyagers");
+$emp = $_SESSION['emp_id'];
+$out = "DELETE FROM login_sessions WHERE emp_id = '$emp'" ;
+
+if (!isset($_SESSION['emp_id']))
+{
+    $_SESSION['msg'] = "You must log in first";
+    header('location: index.php');
+}
+
+if(isset($_GET['logout']))
+{
+    mysqli_query($con,$out) ;
+    session_destroy();
+    unset($_SESSION['NAME']);
+    header('location: index.php');
+}
+
 include('./includes/header.php');
 
 ?>
@@ -36,32 +55,7 @@ include('./includes/header.php');
               </li>
             </ul>
           </nav>
-        </div> <!--
-        <div class="row">
-          <div class="col-md-6 stretch-card grid-margin">
-            <div class="card bg-gradient-info card-img-holder text-white">
-              <div class="card-body">
-                <a href="#">
-                  <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                </a>
-                <h4 class="font-weight-normal mb-3">Weekly Sales<i class="mdi mdi-chart-line mdi-24px float-right"></i>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 stretch-card grid-margin">
-            <div class="card bg-gradient-dark card-img-holder text-white">
-              <div class="card-body">
-                  <a href="#">
-                    <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                  </a>
-                  <h4 class="font-weight-normal mb-3">
-                    Visitors Online<i class="mdi mdi-diamond mdi-24px float-right"></i>
-                  </h4>
-              </div>
-            </div>
-          </div>
-        </div>  -->
+        </div> 
         <?php
 
           include('./includes/dashboard-body/recents-task.php');

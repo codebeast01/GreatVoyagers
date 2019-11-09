@@ -145,7 +145,7 @@ include('./includes/header.php');
                         <div class="col-sm-3">
                           <div class="form-check form-check-info">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="gender" id="membershipRadios1" value="Male" required> Male </label>
+                              <input type="radio" class="form-check-input" name="gender" id="membershipRadios1" value="Male" required checked> Male </label>
                           </div>
                         </div>
                         <div class="col-sm-3">

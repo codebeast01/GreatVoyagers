@@ -66,7 +66,7 @@ include('./includes/header.php');
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <form class="form-sample">
+                <form class="form-sample" >
                   <p style="color:red;" > * Every Field is Mandatory. Kindly fill in all the details.</p>
                   <center>
                     <img src="includes/blank1.png" alt="blank profile image" style="height: 35vh;width: 17vw;" required/>

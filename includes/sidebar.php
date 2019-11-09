@@ -47,7 +47,7 @@
         <div class="border-bottom">
           <!-- Leave it blank only -->
         </div>
-        <a class="btn btn-block btn-lg btn-gradient-info mt-4" href="#" role="button">
+        <a class="btn btn-block btn-lg btn-gradient-info mt-4" href="home.php?logout='1'" role="button">
           Logout
         </a>
       </span>

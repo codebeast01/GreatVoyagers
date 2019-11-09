@@ -16,20 +16,23 @@ include('./includes/header.php');
                 <h4>Hello! let's get started</h4>
                 <h6 class="font-weight-light">Sign in to continue.</h6>
                 <form class="pt-3">
+                  <form action="login_sessions.php" method="post" id="log">
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                    <input type="email" class="form-control form-control-lg" name="email"
+                    id="exampleInputEmail1" placeholder="Useremail">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" name="aadhar" placeholder="Password">
                   </div>
                   <div class="mt-3">
-                    <a class="btn btn-block btn-gradient-info btn-lg font-weight-medium auth-form-btn" href="home.php">SIGN IN</a>
+                    <button type="submit" class="btn btn-gradient-success btn-lg mr-2">Submit</button>
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <br>
                     <a href="#" class="auth-link text-black mx-auto">Forgot password?</a>
                   </div>
                 </form>
+              </form>
               </div>
             </div>
           </div>

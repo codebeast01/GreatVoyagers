@@ -1,5 +1,15 @@
   <?php
 
+$conn=mysqli_connect("localhost","root","","greatvoyagers");
+if(!$conn)
+{
+  echo "error";
+}
+else
+{
+  //echo "ok";
+}
+
 include('./includes/header.php');
 
 ?>
@@ -83,13 +93,14 @@ include('./includes/header.php');
                   </div>
                 </form>
                 <br>
+                <form method="post" action="employeecode.php">
                 <form class="form-sample">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">First Name</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control"  placeholder="Enter First Name" required/>
+                          <input type="text" class="form-control"  placeholder="Enter First Name" name="fname" required/>
                         </div>
                       </div>
                     </div>
@@ -97,7 +108,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Last Name</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control"  placeholder="Enter Last Name" required/>
+                          <input type="text" class="form-control"  placeholder="Enter Last Name" name="lname"  required/>
                         </div>
                       </div>
                     </div>
@@ -107,7 +118,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Father's Name</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter Father's Name" required/>
+                          <input type="text" class="form-control" placeholder="Enter Father's Name" name="father" required/>
                         </div>
                       </div>
                     </div>
@@ -115,7 +126,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Mother's Name</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter Mother's Name" required/>
+                          <input type="text" class="form-control" placeholder="Enter Mother's Name" name="mother"  required/>
                         </div>
                       </div>
                     </div>
@@ -125,7 +136,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Mobile No.</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter Mobile No."  required/>
+                          <input type="text" class="form-control" placeholder="Enter Mobile No." name="mobile"   required/>
                         </div>
                       </div>
                     </div>
@@ -133,7 +144,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Date of Birth</label>
                         <div class="col-sm-9">
-                          <input  type="date" class="form-control" required/>
+                          <input  type="date" class="form-control" name="dob"  required/>
                         </div>
                       </div>
                     </div>
@@ -143,7 +154,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Email Id</label>
                         <div class="col-sm-9">
-                          <input type="Email" class="form-control"  placeholder="Enter Email Id" required/>
+                          <input type="Email" class="form-control"  placeholder="Enter Email Id" name="email"  required/>
                         </div>
                       </div>
                     </div>
@@ -151,7 +162,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Aadhar No.</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter Aadhar Card No."/>
+                          <input type="text" class="form-control" placeholder="Enter Aadhar Card No." name="aadhar" />
                         </div>
                       </div>
                     </div>
@@ -162,7 +173,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">PanCard No.</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control"  placeholder="Enter PanCard No." required/>
+                          <input type="text" class="form-control"  placeholder="Enter PanCard No." name="pan" required/>
                           </div>
                       </div>
                     </div>
@@ -209,7 +220,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Country</label>
                         <div class="col-sm-9">
-                         <input type="text" class="form-control" placeholder="Enter Country"  required/> 
+                         <input type="text" class="form-control" placeholder="Enter Country" name="country" required/> 
                         </div>
                       </div>
                     </div>
@@ -217,7 +228,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">State</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter State"  required/>
+                          <input type="text" class="form-control" placeholder="Enter State" name="state"  required/>
                         </div>
                       </div>
                     </div>
@@ -227,7 +238,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">City</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter City" required/>
+                          <input type="text" class="form-control" placeholder="Enter City" name="city" required/>
                         </div>
                       </div>
                     </div>
@@ -235,7 +246,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Postcode</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter Postal Code"  required/>
+                          <input type="text" class="form-control" placeholder="Enter Postal Code" name="zip"  required/>
                         </div>
                       </div>
                     </div>
@@ -245,7 +256,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Address 1</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter Address" required/>
+                          <input type="text" class="form-control" placeholder="Enter Address" name="add1" required/>
                         </div>
                       </div>
                     </div>
@@ -253,7 +264,7 @@ include('./includes/header.php');
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Address 2</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" placeholder="Enter Address" required/>
+                          <input type="text" class="form-control" placeholder="Enter Address" name="add2" required/>
                         </div>
                       </div>
                     </div>
@@ -263,7 +274,7 @@ include('./includes/header.php');
                   <div class="col-md-6">
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Designation</label>
-                        <input type="text" class="form-control" placeholder="Enter Designation" required/>
+                        <input type="text" class="form-control" placeholder="Enter Designation" name="status" required/>
                       </div>
                     </div>
                 </div>
@@ -272,6 +283,7 @@ include('./includes/header.php');
                     <button type="reset" class="btn btn-gradient-dark btn-lg mr-2" >Reset</button>
                   </center>
                 </form>
+              </form>
               </div>
             </div>
           </div>

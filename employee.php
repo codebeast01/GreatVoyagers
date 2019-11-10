@@ -25,6 +25,16 @@
     $desg = mysqli_real_escape_string($con,$_POST['desg']);
     $city = mysqli_real_escape_string($con,$_POST['city']);
     $zip = mysqli_real_escape_string($con,$_POST['zip']);
+     
+    $sel="select*from employee where email='$email'";
+    $res=mysqli_query($conn,$sel);
+    $row=mysqli_fetch_array($res,MYSQLI_BOTH);
+    if($row['6']==$email)
+      {
+  echo "emailid already exists.";
+  }
+  else
+  {
 
     $query1= "INSERT into employee(fname,lname, father, mother, email, aadhar, pan, dob, country, city, state, mobile, zip, add1, add2, gender, status) VALUES('$fname', '$lname', '$father', '$mother', '$email', '$aadhar', '$pan', '$dob', '$country', '$city', '$state', '$mobile', '$zip', '$add1', '$add2', '$gender', '$desg')";
 
@@ -32,6 +42,7 @@
 
     $result1=mysqli_query($con, $query1);
     $result2=mysqli_query($con, $query2);
+  }
 
   }
   if(isset($_POST['delete'])){
@@ -45,6 +56,7 @@
     $res2=mysqli_query($con, $query2);
   }
   mysqli_close($con);
+
 ?>
 <?php
 

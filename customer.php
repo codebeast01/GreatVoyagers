@@ -1,4 +1,60 @@
 <?php
+  
+  $con=mysqli_connect("localhost", "root", "", "GreatVoyagers");
+  $result1=FALSE;
+  $result2=FALSE;
+  $res1=FALSE;
+  $res2=FALSE;
+  if (isset($_POST['submit'])) {
+    session_start();
+
+    $fname = mysqli_real_escape_string($con,$_POST['fname']);
+    $lname = mysqli_real_escape_string($con,$_POST['lname']);
+    $mobile = mysqli_real_escape_string($con,$_POST['mobile']);
+    $dob = mysqli_real_escape_string($con,$_POST['dob']);
+    $gender = mysqli_real_escape_string($con,$_POST['gender']);
+    $aadhar = mysqli_real_escape_string($con,$_POST['aadhar']);
+    $pan = mysqli_real_escape_string($con,$_POST['pan']);
+    $country = mysqli_real_escape_string($con,$_POST['country']);
+    $email = mysqli_real_escape_string($con,$_POST['email']);
+    $state = mysqli_real_escape_string($con,$_POST['state']);
+    $add1 = mysqli_real_escape_string($con,$_POST['add1']);
+    $add2 = mysqli_real_escape_string($con,$_POST['add2']);
+    $city = mysqli_real_escape_string($con,$_POST['city']);
+    $zip = mysqli_real_escape_string($con,$_POST['zip']);
+    $pass= mysqli_real_escape_string($con,$_POST['pass']);
+    $pass_exp= mysqli_real_escape_string($con,$_POST['pass_exp']);
+     
+    $sel="select*from customer where email='$email'";
+    $res=mysqli_query($conn,$sel);
+    $row=mysqli_fetch_array($res,MYSQLI_BOTH);
+    if($row['4']==$email)
+      {
+  echo "emailid already exists.";
+  }
+  else
+  {
+
+    $query1= "INSERT into customer(fname,lname,email, aadhar, pan, dob, country, city, state, mobile, zip, add1, add2, gender,pass,pass_exp ) VALUES('$fname', '$lname', '$email', '$aadhar', '$pan', '$dob', '$country', '$city', '$state', '$mobile', '$zip', '$add1', '$add2', '$gender','$pass','$pass_exp' )";
+
+  }
+
+  }
+  if(isset($_POST['delete'])){
+    $id=mysqli_real_escape_string($con, $_POST['user']);
+    $aadhar=mysqli_real_escape_string($con, $_POST['adhar']);
+
+    $query1="DELETE FROM customer WHERE email='$id' AND aadhar='$aadhar'";
+
+    $res1=mysqli_query($con, $query1);
+    $res2=mysqli_query($con, $query2);
+  }
+  mysqli_close($con);
+
+?>
+<?php
+
+<?php
 
 include('./includes/header.php');
 
